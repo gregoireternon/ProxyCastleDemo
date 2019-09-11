@@ -7,7 +7,7 @@ using VegetablesEnumerator.Vegatable;
 
 namespace VegetablesEnumerator
 {
-    public class VegatableFactory
+    public  class VegatableFactory
     {
         static Type[] vegetableTypes = new Type[]
         {
@@ -16,7 +16,7 @@ namespace VegetablesEnumerator
             typeof(Topinambour)
         };
 
-        public IVegetable Provide()
+        public  IVegetable Provide()
         {
             int choice = new Random().Next(0, vegetableTypes.Length);
             Type vegetableType = vegetableTypes[choice];

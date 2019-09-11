@@ -1,11 +1,8 @@
-﻿using Castle.DynamicProxy;
+﻿using Castle.Core.Interceptor;
+using Castle.DynamicProxy;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using Unity;
 using VegetablesEnumerator.ProxyTools;
 
 namespace VegetablesEnumerator
@@ -14,6 +11,9 @@ namespace VegetablesEnumerator
     {
         public static void Main(string[] args)
         {
+
+
+
             VegatableFactory factory = new VegatableFactory();
             ProxyGenerator proxyGenerator = new ProxyGenerator();
 
@@ -22,7 +22,12 @@ namespace VegetablesEnumerator
                 try
                 {
                     IVegetable legume = factory.Provide();
-                    legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
+
+                    //Exemple avec Classe
+                    //legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
+
+                    //Exemple avec interface seule
+                    legume = proxyGenerator.CreateInterfaceProxyWithoutTarget(typeof(IVegetable),new BasicInterceptor()) as IVegetable;
 
                     Console.WriteLine("Legume:" + legume.GetNom());
                 }
@@ -34,5 +39,15 @@ namespace VegetablesEnumerator
                 Thread.Sleep(2000);
             }
         }
+
+
+
+
+
+
+
+
+
+
     }
 }

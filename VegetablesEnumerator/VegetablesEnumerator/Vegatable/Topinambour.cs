@@ -8,7 +8,7 @@ namespace VegetablesEnumerator.Vegatable
 {
     public class Topinambour : IVegetable
     {
-        public string GetNom()
+        public virtual string GetNom()
         {
             throw new Exception("Nom trop compliqué");
         }
