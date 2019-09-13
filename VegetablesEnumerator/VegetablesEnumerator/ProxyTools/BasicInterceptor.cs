@@ -1,4 +1,4 @@
-﻿using Castle.Core.Interceptor;
+﻿using Castle.DynamicProxy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,8 @@ namespace VegetablesEnumerator.ProxyTools
     {
         public void Intercept(IInvocation invocation)
         {
-            invocation.ReturnValue = "TOTO";
+            
+            invocation.Proceed();
         }
     }
 }

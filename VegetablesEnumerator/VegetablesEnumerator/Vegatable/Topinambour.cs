@@ -10,6 +10,7 @@ namespace VegetablesEnumerator.Vegatable
     {
         public virtual string GetNom()
         {
+            
             throw new Exception("Nom trop compliqué");
         }
     }
