@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VegetablesEnumerator.Vegatable;
 
-namespace VegetablesEnumerator
+namespace Vegetables
 {
     public  class VegatableFactory
     {
@@ -22,6 +17,5 @@ namespace VegetablesEnumerator
             Type vegetableType = vegetableTypes[choice];
             return vegetableType.GetConstructor(new Type[] { }).Invoke(new object[] { }) as IVegetable;
         }
-
     }
 }

@@ -10,8 +10,7 @@ namespace VegetablesEnumerator.ProxyTools
     public class BasicInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
-        {
-            
+        {            
             invocation.Proceed();
         }
     }

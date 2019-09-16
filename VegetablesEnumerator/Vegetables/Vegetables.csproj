@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{675D56C3-749C-4EEE-87D4-A3F58C20E25C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>VegetablesEnumerator</RootNamespace>
-    <AssemblyName>VegetablesEnumerator</AssemblyName>
+    <ProjectGuid>{9AC902AF-84AA-4EFF-9EFE-6F1D57B8F4E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Vegetables</RootNamespace>
+    <AssemblyName>Vegetables</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,26 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IVegetable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProxyTools\BasicInterceptor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Castle.Core">
-      <Version>4.4.0</Version>
-    </PackageReference>
-    <PackageReference Include="Unity">
-      <Version>5.11.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Vegetables\Vegetables.csproj">
-      <Project>{9ac902af-84aa-4eff-9efe-6f1d57b8f4e5}</Project>
-      <Name>Vegetables</Name>
-    </ProjectReference>
+    <Compile Include="VegatableFactory.cs" />
+    <Compile Include="Vegatables\Carotte.cs" />
+    <Compile Include="Vegatables\Navet.cs" />
+    <Compile Include="Vegatables\Topinambour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Vegetables;
 using VegetablesEnumerator.ProxyTools;
 
 namespace VegetablesEnumerator
@@ -10,9 +11,6 @@ namespace VegetablesEnumerator
     {
         public static void Main(string[] args)
         {
-
-
-
             VegatableFactory factory = new VegatableFactory();
             ProxyGenerator proxyGenerator = new ProxyGenerator();
 
@@ -38,15 +36,5 @@ namespace VegetablesEnumerator
                 Thread.Sleep(2000);
             }
         }
-
-
-
-
-
-
-
-
-
-
     }
 }
