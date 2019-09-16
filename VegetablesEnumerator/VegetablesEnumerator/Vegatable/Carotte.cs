@@ -8,7 +8,10 @@ namespace VegetablesEnumerator.Vegatable
 {
     public class Carotte : IVegetable
     {
-        public virtual string GetNom()
+        public  int Prix { get; set; }
+        
+
+        public  string GetNom()
         {
             
             return "Carotte";

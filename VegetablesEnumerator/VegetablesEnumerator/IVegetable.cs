@@ -9,5 +9,7 @@ namespace VegetablesEnumerator
     public interface IVegetable
     {
         string GetNom();
+
+        int Prix { get; set; }
     }
 }
