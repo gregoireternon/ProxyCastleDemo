@@ -18,7 +18,7 @@ namespace ProxyPerformance
                 // Ici j'évite le topimachin car mon programme ne digère pas :)
                 do
                 {
-                    target = new VegatableFactory().Provide();
+                    target = new VegetableFactory().Provide();
                 }
                 while (target is Topinambour);
 

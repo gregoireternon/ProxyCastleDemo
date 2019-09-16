@@ -14,7 +14,7 @@ namespace VegetablesEnumerator
 
 
 
-            VegatableFactory factory = new VegatableFactory();
+            VegetableFactory factory = new VegetableFactory();
             ProxyGenerator proxyGenerator = new ProxyGenerator();
 
             while (true)
