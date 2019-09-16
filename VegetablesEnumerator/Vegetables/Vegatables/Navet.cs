@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VegetablesEnumerator.Vegatable
+namespace Vegetables
 {
     public class Navet : IVegetable
     {
         public  int Prix { get; set; }
         public  string GetNom()
         {
-            
             return "Navet";
         }
     }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VegetablesEnumerator.Vegatable
+namespace Vegetables
 {
     public class Carotte : IVegetable
     {
@@ -13,7 +9,7 @@ namespace VegetablesEnumerator.Vegatable
 
         public  string GetNom()
         {
-            
+
             return "Carotte";
         }
     }
