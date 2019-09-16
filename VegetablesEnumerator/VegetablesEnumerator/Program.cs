@@ -23,7 +23,7 @@ namespace VegetablesEnumerator
                     IVegetable legume =  factory.Provide();
 
                     //Exemple avec Classe
-                    legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
+                    //legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
 
                     //Exemple avec interface seule
                     //legume = proxyGenerator.CreateInterfaceProxyWithoutTarget(typeof(IVegetable),new BasicInterceptor()) as IVegetable;
