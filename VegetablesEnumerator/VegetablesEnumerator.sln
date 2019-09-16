@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegetablesEnumerator", "Veg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegetables", "Vegetables\Vegetables.csproj", "{9AC902AF-84AA-4EFF-9EFE-6F1D57B8F4E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPerformance", "ProxyPerformance\ProxyPerformance.csproj", "{D547FB77-BF55-4AF9-93E7-70566CC6EE15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9AC902AF-84AA-4EFF-9EFE-6F1D57B8F4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AC902AF-84AA-4EFF-9EFE-6F1D57B8F4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AC902AF-84AA-4EFF-9EFE-6F1D57B8F4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
