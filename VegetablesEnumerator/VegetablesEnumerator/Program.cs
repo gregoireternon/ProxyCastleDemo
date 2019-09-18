@@ -32,6 +32,8 @@ namespace VegetablesEnumerator
 
                     Console.WriteLine("Legume:" + legume.GetNom());
                     legume.Prix= 12;
+
+                    Console.WriteLine("\n");
                 }
                 catch (Exception e)
                 {

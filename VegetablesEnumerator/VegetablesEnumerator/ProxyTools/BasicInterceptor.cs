@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Vegetables;
 
 namespace VegetablesEnumerator.ProxyTools
 {
@@ -16,7 +16,13 @@ namespace VegetablesEnumerator.ProxyTools
             Console.WriteLine("Méthode appelée: " + invocation.Method.Name);
             Console.WriteLine("paramètres: " );
             invocation.Arguments.ToList().ForEach(a => Console.WriteLine("\t" + a.ToString()));
-            invocation.Proceed();
+            try {
+                invocation.Proceed();
+            }
+            catch (VegetableException e)
+            {
+                Console.WriteLine("Ah, là il y a eu une erreur...");
+            }
         }
     }
 }
