@@ -1,7 +1,10 @@
 ﻿using Castle.DynamicProxy;
+using ProxyPerformance.Extensions;
 using ProxyPerformance.ProxyTools;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using Vegetables;
 
@@ -9,9 +12,18 @@ namespace ProxyPerformance
 {
     class Program
     {
+        static List<long> ticksGeneration = new List<long>();
+        static List<long> ticksdejaGenere = new List<long>();
+        static List<long> ticksNoProxy = new List<long>();
+
         static void Main(string[] args)
         {
-            while (true)
+            WriteSeparatorLine();
+            Console.WriteLine("| Type        | Génération  | Déja généré | Sans Proxy  |");
+            WriteSeparatorLine();
+            
+            int counter = 0;
+            while (counter++ < 1000)
             {
                 IVegetable target;
 
@@ -51,9 +63,35 @@ namespace ProxyPerformance
                 swNoProxy.Stop();
                 // ----------------------------------
 
-                Console.WriteLine($"{swGeneration.Elapsed} - {swDejaGenere.Elapsed} - {swNoProxy.Elapsed} - {target.GetNom()}");
-                Thread.Sleep(2000);
+                Console.WriteLine("| {0, -11} " +
+                    "| {1,11} | {2,11} | {3,11} |",
+                    target.GetNom(),
+                    swGeneration.Elapsed.Ticks.ToMilliseconds(),
+                    swDejaGenere.Elapsed.Ticks.ToMilliseconds(),
+                    swNoProxy.Elapsed.Ticks.ToMilliseconds());
+                WriteSeparatorLine();
+
+                ticksGeneration.Add(swGeneration.Elapsed.Ticks);
+                ticksdejaGenere.Add(swDejaGenere.Elapsed.Ticks);
+                ticksNoProxy.Add(swNoProxy.Elapsed.Ticks);
+
+                Thread.Sleep(500);
             }
+
+
+            Console.WriteLine();
+            WriteSeparatorLine();
+            Console.WriteLine("| Moyennes                                              |");
+            WriteSeparatorLine();
+            Console.WriteLine(" - Avec génération du proxy : {0,11}", ticksGeneration.Average().ToMilliseconds());
+            Console.WriteLine(" - Avec un proxy généré     : {0,11}", ticksdejaGenere.Average().ToMilliseconds());
+            Console.WriteLine(" - Sans proxy               : {0,11}", ticksNoProxy.Average().ToMilliseconds());
+            Console.Read();
+        }
+
+        static void WriteSeparatorLine()
+        {
+            Console.WriteLine("---------------------------------------------------------");
         }
     }
 }
