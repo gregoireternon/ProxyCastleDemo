@@ -8,7 +8,7 @@ namespace Vegetables
         public  string GetNom()
         {
             
-            throw new Exception("Nom trop compliqué");
+            throw new VegetableException("Nom trop compliqué");
         }
     }
 }
