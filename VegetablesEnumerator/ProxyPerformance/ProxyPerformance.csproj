@@ -51,6 +51,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyTools\BasicInterceptor.cs" />
+    <Compile Include="Scenarii\AScenario.cs" />
+    <Compile Include="Scenarii\ScenarioMix.cs" />
+    <Compile Include="Scenarii\Scenario3.cs" />
+    <Compile Include="Scenarii\Scenario2.cs" />
+    <Compile Include="Scenarii\Scenario1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
