@@ -4,7 +4,8 @@ namespace Vegetables
 {
     public class Navet : IVegetable
     {
-        public virtual string GetNom()
+        public  int Prix { get; set; }
+        public  string GetNom()
         {
             return "Navet";
         }
