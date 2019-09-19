@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Castle.DynamicProxy;
+using System;
 using System.Collections.Generic;
+using System.Threading;
 using Vegetables;
 using VegetablesEnumerator.Scenarii;
 
@@ -14,7 +16,7 @@ namespace ProxyPerformance
         static void Main(string[] args)
         {
             // Génératin du proxy à chaque appel
-            AScenario scenario = new Scenario1();
+            //AScenario scenario = new Scenario1();
 
             // Utilisation d'un proxy généré
             //AScenario scenario = new Scenario2();
@@ -23,7 +25,7 @@ namespace ProxyPerformance
             //AScenario scenario = new Scenario3();
 
             // Comparatif des 3 scenarii
-            //AScenario scenario = new ScenarioMix();
+            AScenario scenario = new ScenarioMix();
             
             int counter = 0;
             while (counter++ < 1000)
@@ -39,7 +41,7 @@ namespace ProxyPerformance
 
                 scenario.Run(target);
                 
-                //Thread.Sleep(100);
+                Thread.Sleep(1000);
             }
 
             scenario.DisplayAverageRunningTime();
