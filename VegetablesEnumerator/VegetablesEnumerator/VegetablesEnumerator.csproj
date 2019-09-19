@@ -59,6 +59,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Crucifere\Crucifere.csproj">
+      <Project>{f99ba7c8-7e9c-4858-a247-03ee2fb84e4f}</Project>
+      <Name>Crucifere</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vegetables\Vegetables.csproj">
       <Project>{9ac902af-84aa-4eff-9efe-6f1d57b8f4e5}</Project>
       <Name>Vegetables</Name>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegetables", "Vegetables\Ve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPerformance", "ProxyPerformance\ProxyPerformance.csproj", "{D547FB77-BF55-4AF9-93E7-70566CC6EE15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crucifere", "Crucifere\Crucifere.csproj", "{F99BA7C8-7E9C-4858-A247-03EE2FB84E4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D547FB77-BF55-4AF9-93E7-70566CC6EE15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99BA7C8-7E9C-4858-A247-03EE2FB84E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99BA7C8-7E9C-4858-A247-03EE2FB84E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99BA7C8-7E9C-4858-A247-03EE2FB84E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99BA7C8-7E9C-4858-A247-03EE2FB84E4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
