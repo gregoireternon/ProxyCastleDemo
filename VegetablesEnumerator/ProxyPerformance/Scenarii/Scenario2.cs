@@ -11,14 +11,14 @@ namespace VegetablesEnumerator.Scenarii
 {
     public class Scenario2 : AScenario
     {
+        private ProxyGenerator _proxyGenerator = new ProxyGenerator();
         private List<long> _ticks = new List<long>();
 
         public Scenario2() : base() { }
 
         public override void Run(IVegetable target)
         {
-            var pg = new ProxyGenerator();
-            var proxy = pg.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
+            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
 
             var sw = new Stopwatch();
             sw.Start();

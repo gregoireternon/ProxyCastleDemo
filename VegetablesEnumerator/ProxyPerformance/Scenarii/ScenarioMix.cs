@@ -11,6 +11,7 @@ namespace VegetablesEnumerator.Scenarii
 {
     public class ScenarioMix : AScenario
     {
+        private ProxyGenerator _proxyGenerator = new ProxyGenerator();
         private List<long> _ticksGeneration = new List<long>();
         private List<long> _ticksdejaGenere = new List<long>();
         private List<long> _ticksNoProxy = new List<long>();
@@ -28,8 +29,7 @@ namespace VegetablesEnumerator.Scenarii
             var swGeneration = new Stopwatch();
             swGeneration.Start();
 
-            var pg = new ProxyGenerator();
-            var proxy = pg.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
+            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
             proxy.GetNom();
 
             swGeneration.Stop();
