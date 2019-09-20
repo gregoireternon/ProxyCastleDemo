@@ -7,7 +7,7 @@ namespace Vegetables
         public  int Prix { get; set; }
         public  string GetNom()
         {
-            return "Radis";
+            return "Concombre";
         }
     }
 }

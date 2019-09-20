@@ -51,7 +51,7 @@
     <Compile Include="VegetableException.cs" />
     <Compile Include="VegetableFactory.cs" />
     <Compile Include="Vegatables\Carotte.cs" />
-    <Compile Include="Vegatables\Radis.cs" />
+    <Compile Include="Vegatables\Concombre.cs" />
     <Compile Include="Vegatables\Topinambour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
