@@ -21,7 +21,7 @@ namespace VegetablesEnumerator.Scenarii
             var sw = new Stopwatch();
             sw.Start();
 
-            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
+            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new PerfInterceptor());
             proxy.GetNom();
 
             sw.Stop();

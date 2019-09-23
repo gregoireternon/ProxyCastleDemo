@@ -17,19 +17,14 @@ namespace VegetablesEnumerator.Scenarii
         private List<long> _ticksNoProxy = new List<long>();
 
         public ScenarioMix() : base() { }
-
-        protected override string GetHeader()
-        {
-            return "| Type        | Génération  | Déja généré | Sans Proxy  |";
-        }
-
+        
         public override void Run(IVegetable target)
         {
             // Exécution avec génération du proxy
             var swGeneration = new Stopwatch();
             swGeneration.Start();
 
-            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
+            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new PerfInterceptor());
             proxy.GetNom();
 
             swGeneration.Stop();
@@ -65,6 +60,11 @@ namespace VegetablesEnumerator.Scenarii
             _ticksGeneration.Add(swGeneration.Elapsed.Ticks);
             _ticksdejaGenere.Add(swDejaGenere.Elapsed.Ticks);
             _ticksNoProxy.Add(swNoProxy.Elapsed.Ticks);
+        }
+
+        protected override string GetHeader()
+        {
+            return "| Type        | Génération  | Déja généré | Sans Proxy  |";
         }
 
         public override void DisplayAverageRunningTime()

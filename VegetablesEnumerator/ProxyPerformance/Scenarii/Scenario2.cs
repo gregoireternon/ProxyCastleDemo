@@ -18,7 +18,7 @@ namespace VegetablesEnumerator.Scenarii
 
         public override void Run(IVegetable target)
         {
-            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new BasicInterceptor());
+            var proxy = _proxyGenerator.CreateInterfaceProxyWithTarget<IVegetable>(target, new PerfInterceptor());
 
             var sw = new Stopwatch();
             sw.Start();

@@ -2,7 +2,7 @@
 
 namespace ProxyPerformance.ProxyTools
 {
-    public class BasicInterceptor : IInterceptor
+    public class PerfInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
         {
