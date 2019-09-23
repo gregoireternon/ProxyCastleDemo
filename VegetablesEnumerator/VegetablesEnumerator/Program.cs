@@ -14,10 +14,6 @@ namespace VegetablesEnumerator
         {
             var EntryAssembly = Assembly.Load("Crucifere");
     
-
-
-
-
             VegetableFactory factory = new VegetableFactory();
             ProxyGenerator proxyGenerator = new ProxyGenerator();
 
@@ -28,8 +24,8 @@ namespace VegetablesEnumerator
                     IVegetable legume =  factory.Provide();
 
                     //Exemple avec Classe
-                    // legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
-                    legume = proxyGenerator.CreateInterfaceProxyWithTarget(legume, new MaskInterceptor()) as IVegetable;
+                    //legume = proxyGenerator.CreateClassProxy(legume.GetType(), new BasicInterceptor()) as IVegetable;
+                    //legume = proxyGenerator.CreateInterfaceProxyWithTarget(legume, new MaskInterceptor()) as IVegetable;
 
                     //Exemple avec interface seule
                     //legume = proxyGenerator.CreateInterfaceProxyWithoutTarget(typeof(IVegetable),new BasicInterceptor()) as IVegetable;

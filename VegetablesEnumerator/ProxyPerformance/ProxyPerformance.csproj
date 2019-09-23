@@ -50,7 +50,7 @@
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProxyTools\BasicInterceptor.cs" />
+    <Compile Include="ProxyTools\PerfInterceptor.cs" />
     <Compile Include="Scenarii\AScenario.cs" />
     <Compile Include="Scenarii\ScenarioMix.cs" />
     <Compile Include="Scenarii\Scenario3.cs" />

@@ -2,7 +2,7 @@
 
 namespace Vegetables
 {
-    public class Radis : IVegetable
+    public class Concombre : IVegetable
     {
         public  int Prix { get; set; }
         public  string GetNom()
