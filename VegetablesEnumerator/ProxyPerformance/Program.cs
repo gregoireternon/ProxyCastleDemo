@@ -9,10 +9,6 @@ namespace ProxyPerformance
 {
     class Program
     {
-        static List<long> ticksGeneration = new List<long>();
-        static List<long> ticksdejaGenere = new List<long>();
-        static List<long> ticksNoProxy = new List<long>();
-
         static void Main(string[] args)
         {
             // Génératin du proxy à chaque appel
